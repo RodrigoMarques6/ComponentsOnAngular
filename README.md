@@ -26,7 +26,7 @@ Agora eu tenho uma variável "name" que vai ser do tipo string, e que está pron
 
 ## 9. Modificamos o nome da variável, que antes era name e agora passou a ser childName, para ficar mais fácil o entendimento;
 
-## 10. Entramos no componente filho, no TS, e adicionamos a classe na parte do export;
+## 10. Entramos no componente filho, no TS, e adicionamos a classe name na parte do export;
 
 ## 11. Para que o valor da propriedade criada seja transportada do componente pai para o filho, eu preciso dizer que o filho está esperando uma propriedade que se chama childName e que receberá dados do componente pai;
 Para isso, utilizamos o Input, entre as chaves do impor, no TS do componente filho;
