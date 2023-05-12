@@ -1,27 +1,39 @@
-# ComponentesNoAngular
+# Componentes no Angular:
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+## 1. Criar um componente com o comando ng generate component
+Caso o componente seja dentro da pasta components, criar com o seguinte comando:
+ng generate component components/nome-do-componente
 
-## Development server
+## 2. Entrar na raiz do projeto, no HTML do Angular e chamar os componentes 
+Por exemplo: se criei um componente chamado fhater-component, deve-se chamá-lo
+no HTML raiz assim: <app-father-component></app-father-component>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 3. Entramos no componente pai que foi criado e na parte do export, adicionamos uma classe;
+Iniciamos com "name!: string", onde a expressão "!" significa que estamos iniciando uma variável com valor vazio;
+Perceba que precisamos tipar essa classe.
+Agora eu tenho uma variável "name" que vai ser do tipo string, e que está pronta para ser exportada para o componente filho;
 
-## Code scaffolding
+## 4. No HTML do componente pai, eu vou chamar o componente filho para iniciar a comunicação entre os componentes;
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 5. Podemos agora adicionar algo no componente filho para renderizar na tela;
 
-## Build
+## . Eu quero que o name que está sendo exportado lá no componente pai seja passado para o componente filho e o componente filho altere o valor dessa variável e envie de volta pro pai;
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## 7. Para iniciar, preciso ir no HTML do componente pai e digitar [name] = "name". Vai ficar assim:
+<app-child-component [name] = "name"></app-child-component>
 
-## Running unit tests
+## 8. O que eu fiz: passei a propriedade name que está no componente pai para uma propriedade chamada name que está no componente filho;
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## 9. Modificamos o nome da variável, que antes era name e agora passou a ser childName, para ficar mais fácil o entendimento;
 
-## Running end-to-end tests
+## 10. Entramos no componente filho, no TS, e adicionamos a classe na parte do export;
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## 11. Para que o valor da propriedade criada seja transportada do componente pai para o filho, eu preciso dizer que o filho está esperando uma propriedade que se chama childName e que receberá dados do componente pai;
+Para isso, utilizamos o Input, entre as chaves do impor, no TS do componente filho;
+Na classe, na parte do export, nós adicionamos antes do nome da classe a expressão "@Input()", é uma função.
 
-## Further help
+## 12. Agora nós fomos no TS do componente pai e atribuimos um valor à classe, no exemplo utilizei 'Rodrigo';
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 13. Após isso, fomos no HTML do componente filho e chamamos essa variável, da seguinte forma:
+<h2>Nome: {{childName}}</h2>
+Lembrando que parar chamar variáveis no Angular, utiliza-se duas chaves.

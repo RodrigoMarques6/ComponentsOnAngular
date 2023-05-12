@@ -6,6 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./child-component.component.css']
 })
 export class ChildComponentComponent {
-  @Input() name!: string;
-  @Input() age!: number;
+  @Input() childName!: string
 }
