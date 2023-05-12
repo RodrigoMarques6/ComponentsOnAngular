@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./father-component.component.css']
 })
 export class FatherComponentComponent {
-  name!: string
+  fatherName: string = 'Rodrigo'
 }

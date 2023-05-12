@@ -6,5 +6,5 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./child-component.component.css']
 })
 export class ChildComponentComponent {
-  @Input() childName!: string
+    @Input() childName!: string
 }
