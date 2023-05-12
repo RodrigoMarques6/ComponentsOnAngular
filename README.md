@@ -1,7 +1,7 @@
 # Componentes no Angular:
 
 ## 1. Criar um componente com o comando ng generate component
-Caso o componente seja dentro da pasta components, criar com o seguinte comando:
+Caso o componente precise ficar dentro da pasta components, criar com o seguinte comando:
 ng generate component components/nome-do-componente
 
 ## 2. Entrar na raiz do projeto, no HTML do Angular e chamar os componentes 
@@ -17,7 +17,7 @@ Agora eu tenho uma variável "name" que vai ser do tipo string, e que está pron
 
 ## 5. Podemos agora adicionar algo no componente filho para renderizar na tela;
 
-## . Eu quero que o name que está sendo exportado lá no componente pai seja passado para o componente filho e o componente filho altere o valor dessa variável e envie de volta pro pai;
+## 6. Eu quero que o name que está sendo exportado lá no componente pai seja passado para o componente filho e o componente filho altere o valor dessa variável e envie de volta pro pai;
 
 ## 7. Para iniciar, preciso ir no HTML do componente pai e digitar [name] = "name". Vai ficar assim:
 <app-child-component [name] = "name"></app-child-component>
