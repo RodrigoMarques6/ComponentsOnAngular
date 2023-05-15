@@ -7,4 +7,8 @@ import { Component, Input } from '@angular/core';
 })
 export class ChildComponentComponent {
     @Input() childName!: string
+    @Input() user!: {
+      age: number, 
+      email: string,
+    }
 }

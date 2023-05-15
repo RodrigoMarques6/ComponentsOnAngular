@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class FatherComponentComponent {
   fatherName: string = 'Rodrigo'
+  objectUser = {
+    age: 27,
+    email: 'rodrigo@example.com',
+  }
 }
